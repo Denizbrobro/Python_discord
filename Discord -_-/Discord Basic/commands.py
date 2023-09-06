@@ -5,22 +5,22 @@ bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
-    print("Bot Aktif")
+     print("Bot Active")
 
-@bot.command() #burası @bot.command eğer komut yapıyorsanız bu gerekli
-async def hello(ctx): #burada komut ve değişkenler var ve söylemeliyim ctx gerekli
-    await ctx.send("Hello My Name İs Denizbrobro Bot")
-    print("!hello Kullanıldı.")
+@bot.command() #here @bot.command this is required if you are making commands
+async def hello(ctx): #there are commands and variables here and I must say ctx is required
+     await ctx.send("Hello My Name Is Denizbrobro Bot")
+     print("!hello Used.")
 
-@bot.command() #burası @bot.command eğer komut yapıyorsanız bu gerekli
-async def say(ctx, *, message): #Burada yeni bir değişken görüyorsunuz bu değişkenin görevi büyük ve yıldız
-    await ctx.send(message) #burada yıldızın olma sebebi eğer yıldız olmasaydı sadece 1 kelimeyi göndericekti fakat yıldız olduğu için hepsini gönderdi
-    print("!say kullanıldı.")
+@bot.command() #here @bot.command this is required if you are making commands
+async def say(ctx, *, message): #Here you see a new variable, the function of this variable is capital and asterisk
+     await ctx.send(message) #the reason for the star here If there was no star, it would only send 1 word, but because it was a star, it sent them all
+     print("!count used.")
 
 @bot.command()
-async def bye(ctx): #Burada size Mesaj Silmeyi Öğrettim
-    await ctx.message.delete()
-    await ctx.send("Good bye")
-    print("!bye kullanıldı.")
+async def bye(ctx): #Here I Taught You How to Delete Messages
+     await ctx.message.delete()
+     await ctx.send("Good bye")
+     print("!bye used.")
 
 bot.run("Your Token Here")
